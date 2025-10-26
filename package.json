@@ -1,0 +1,13 @@
+{
+  "name": "tiktok-shop-checkout",
+  "version": "1.0.0",
+  "description": "Sistema completo de checkout com Asaas PIX e programa de afiliados",
+  "main": "worker.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "keywords": ["cloudflare", "workers", "asaas", "pix", "affiliate", "checkout"],
+  "author": "",
+  "license": "MIT"
+}

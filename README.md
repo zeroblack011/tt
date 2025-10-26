@@ -2,6 +2,14 @@
 
 Sistema completo de checkout com integração Asaas PIX e programa de afiliados para venda de produtos/serviços.
 
+## ⚠️ ERRO DE DEPLOY?
+
+**Se você está vendo "Failed: error occurred while fetching repository"**
+
+👉 **[LEIA O GUIA DE DEPLOY AQUI](DEPLOY.md)** 👈
+
+O jeito mais fácil é fazer **deploy manual** copiando o código no dashboard do Cloudflare. Todas as instruções estão no arquivo `DEPLOY.md`.
+
 ## 🚀 Funcionalidades
 
 ### Para Clientes
