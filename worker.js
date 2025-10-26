@@ -1,3 +1,4 @@
+// @ts-nocheck
 // ===========================================
 // TIKTOK SHOP UK - SISTEMA COMPLETO COM ASAAS + AFILIADOS
 // ===========================================
