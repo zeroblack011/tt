@@ -1207,8 +1207,9 @@ function getCheckoutHTML(affiliateCode) {
 </html>`;
 }
 
-// CONTINUA NO PRÓXIMO COMENTÁRIO... (Admin e Affiliate HTML)
-// Por limitação de tamanho, vou usar os mesmos HTMLs do CODIGO-PRONTO.js
+// ===========================================
+// HTML: ADMIN PANEL
+// ===========================================
 
 const ADMIN_HTML = `<!DOCTYPE html>
 <html lang="pt-BR">
