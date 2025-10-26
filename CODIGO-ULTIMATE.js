@@ -3113,30 +3113,30 @@ const ADMIN_HTML = `<!DOCTYPE html>
         if (data.success) {
           const report = data.report;
           document.getElementById('reportResults').innerHTML = `
-            <div class="stats-grid">
-              <div class="stat-card">
+            <div class='stats-grid'>
+              <div class='stat-card'>
                 <h3>Total de Pedidos</h3>
-                <div class="value">${report.total}</div>
+                <div class='value'>${report.total}</div>
               </div>
-              <div class="stat-card">
+              <div class='stat-card'>
                 <h3>Pagos</h3>
-                <div class="value">${report.paid}</div>
+                <div class='value'>${report.paid}</div>
               </div>
-              <div class="stat-card">
+              <div class='stat-card'>
                 <h3>Pendentes</h3>
-                <div class="value">${report.pending}</div>
+                <div class='value'>${report.pending}</div>
               </div>
-              <div class="stat-card">
+              <div class='stat-card'>
                 <h3>Taxa de Conversão</h3>
-                <div class="value">${report.conversionRate}%</div>
+                <div class='value'>${report.conversionRate}%</div>
               </div>
-              <div class="stat-card">
+              <div class='stat-card'>
                 <h3>Receita</h3>
-                <div class="value">R$ ${report.revenue.toFixed(2)}</div>
+                <div class='value'>R$ ${report.revenue.toFixed(2)}</div>
               </div>
-              <div class="stat-card">
+              <div class='stat-card'>
                 <h3>Comissões</h3>
-                <div class="value">R$ ${report.commission.toFixed(2)}</div>
+                <div class='value'>R$ ${report.commission.toFixed(2)}</div>
               </div>
             </div>
           `;
@@ -3160,9 +3160,9 @@ const ADMIN_HTML = `<!DOCTYPE html>
         if (data.success) {
           currentTFASecret = data.secret;
           document.getElementById('qrCodeContainer').innerHTML = `
-            <img src="${data.qrCodeUrl}" alt="QR Code 2FA">
-            <p style="margin-top:15px;">Escaneie com Google Authenticator</p>
-            <p style="font-size:12px;color:#94a3b8;margin-top:10px;">Secret: ${data.secret}</p>
+            <img src='${data.qrCodeUrl}' alt='QR Code 2FA'>
+            <p style='margin-top:15px;'>Escaneie com Google Authenticator</p>
+            <p style='font-size:12px;color:#94a3b8;margin-top:10px;'>Secret: ${data.secret}</p>
           `;
           document.getElementById('tfaModal').classList.add('show');
         }
