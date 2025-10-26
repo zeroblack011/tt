@@ -269,7 +269,7 @@ async function handleCreateOrder(request, env, corsHeaders) {
       return jsonResponse({ error: 'Dados incompletos' }, 400, corsHeaders);
     }
 
-    const orderId = 'ORDER_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    const orderId = 'ORDER_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
     const txid = 'TRK' + Date.now().toString().slice(-6);
 
     // Verificar afiliado e se está ATIVO
@@ -535,7 +535,7 @@ async function handleAffiliateRegister(request, env, corsHeaders) {
       return jsonResponse({ error: 'Código já existe. Tente outro nome.' }, 400, corsHeaders);
     }
 
-    const affiliateId = 'AFF_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    const affiliateId = 'AFF_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
 
     const affiliate = {
       id: affiliateId,
@@ -1371,7 +1371,7 @@ async function handleSaveTheme(request, env, corsHeaders) {
 
 async function createNotification(env, notificationData) {
   try {
-    const notifId = 'NOTIF_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    const notifId = 'NOTIF_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
 
     const notification = {
       id: notifId,
@@ -1449,7 +1449,7 @@ async function verify2FACode(env, code) {
     const secret = await env.TIKTOK_ORDERS.get('TOTP_SECRET');
     if (!secret) return false;
 
-    const token = generateTOTP(secret);
+    const token = await generateTOTP(secret);
     return code === token;
 
   } catch (error) {
@@ -1494,7 +1494,7 @@ async function createAsaasCharge(env, data) {
 }
 
 function generateAffiliateCode(name) {
-  return name.replace(/\s+/g, '').substring(0, 10).toUpperCase() + Math.random().toString(36).substr(2, 4).toUpperCase();
+  return name.replace(/\s+/g, '').substring(0, 10).toUpperCase() + Math.random().toString(36).substring(2, 6).toUpperCase();
 }
 
 function getDateInDays(days) {
@@ -1551,7 +1551,7 @@ function base32Decode(secret) {
 
   const bytes = new Uint8Array(Math.floor(bits.length / 8));
   for (let i = 0; i < bytes.length; i++) {
-    bytes[i] = parseInt(bits.substr(i * 8, 8), 2);
+    bytes[i] = parseInt(bits.substring(i * 8, i * 8 + 8), 2);
   }
 
   return bytes;
