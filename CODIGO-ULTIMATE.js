@@ -1,4 +1,3 @@
-// @ts-nocheck
 // ===========================================
 // TIKTOK SHOP UK - SISTEMA ULTIMATE 2.0
 // VERSÃO COMPLETA COM TODAS AS FUNCIONALIDADES
